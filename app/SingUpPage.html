@@ -1,0 +1,117 @@
+	<div id="firstPage" class="container" > 
+		<div ng-controller="singUpCtrl">
+				<div ng-controller="singUpCtrl">
+					<div class="container">
+						<div class="page-header">
+							<h3 class="text-primary">Remplir le form pour creer votre compte</h3>
+							<hr>
+						</div>
+						<div class="row">
+						 	<form name="newAccount" class="form-horizontal">
+						 		<fieldset>
+	<!-- ***************************************************First Name**********************************-->
+						 			<div class="form-group">
+							 			<label for="firstName" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm ">First Name
+							 			</label> 
+							 			<div class="col-md-4">
+							 				<input name="firstName" type="text" class="form-control" required ng-model="firstname" placeholder="Enter Your First Name here" id="inputSmall"/>
+							 			</div>
+						 			</div>
+	<!-- ***************************************************Family Name**********************************-->
+
+						 			<div class="form-group">
+							 			<label for="familyName" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm">Family Name
+							 			</label>
+							 			<div class="col-md-4">
+							 				<input name="familyName" type="text" class="form-control" required ng-model="familyname" placeholder="Enter Your Family Name here" id="inputSmall" />
+							 			</div>
+							 		</div>
+	<!-- ***************************************************Entreprise**********************************-->
+
+							 		<div class="form-group">
+							 			<label for="entreprise" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm">Entreprise
+							 			</label>
+							 			<div class="col-md-4">
+							 				<input name="entreprise" type="text" class="form-control" required ng-model="entreprise" placeholder="Enter The Name of your Entreprise" id="inputSmall" />
+							 			</div>
+							 		</div>
+	<!-- ***************************************************Poste**********************************-->
+
+							 		<div class="form-group">
+							 			<label for="poste" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm">Poste</label>
+							 			<div class="col-md-4">
+							 				<input name="poste" type="text" class="form-control" required ng-model="poste" placeholder="Enter Your poste here" id="inputSmall" /> 
+							 			</div> 
+							 		</div>
+	<!-- ***************************************************Country**********************************-->
+
+							 		<div class="form-group">
+							 			<label for="country" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm"> Country </label>
+							 			<div class="col-md-4">
+								 			<select class="form-control" required ng-model="country" id="country">
+								 				<option>Morocco</option>
+								 				<option>Espagne</option>
+								 				<option>France</option>
+								 				<option>Germanie</option>
+								 				<option>Italie</option>
+								 			</select>
+								 		</div>
+							 		</div>
+	<!-- ***************************************************City**********************************-->
+
+							 		<div class="form-group">
+							 			<label for="city" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm">City</label>
+							 			<div class="col-md-4">
+								 			<select class="form-control" required ng-model="city" id="city" value="Select your city">
+								 				<option>Rabat</option>
+								 				<option>Casa</option>
+								 				<option>Oujda</option>
+								 				<option>Taza</option>
+								 			</select>
+								 		</div>
+							 		</div>
+	<!-- ***************************************************Adress**********************************-->
+
+							 		<div class="form-group">
+							 			<label for="adress" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm">Adress</label>
+							 			<div class="col-md-4">
+							 				<input name="adress" type="text" class="form-control" required ng-model="adress" placeholder="Enter Your Entreprise'adress here" id="inputSmall"/>
+							 			</div>
+							 		</div>
+	<!-- ***************************************************Phone**********************************-->
+
+							 		<div class="form-group">
+							 			<label for="phone" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm">Phone Number</label>
+							 			<div class="col-md-4">
+							 				<input id="phone" type="text" class="form-control" required ng-model="phone" placeholder="+2120000000" id="inputSmall" />
+							 			</div>
+							 		</div>
+	<!-- ***************************************************email**********************************-->
+
+							 		<div class="form-group">
+							 			<label for="email" class="control-label col-md-2 col-md-offset-3 hidden-xs hidden-sm"> Adress E-mail
+							 			</label>
+							 			<div class="col-md-4">
+							 				<input name="email" type="email" class="form-control" required ng-model="email" placeholder="Enter Your E-mail Adress here" id="inputSmall" />
+							 			</div>
+						 			</div>
+<!-- ***************************************************submit button**********************************-->
+
+							 		<div class="form-group">
+							 			<div class="col-md-1 col-md-offset-7">
+							 				<input type="submit" value="Submit" ng-click="addMember($index)" class="btn btn-primary btn-lg">
+							 			</div>
+							 			<div class="col-md-1">
+							 				<input type="reset" value="Cancel" class="btn btn-default btn-lg">
+							 			</div>
+							 		</div>
+
+<!-- ***************************************************fin**********************************-->
+
+						 		</fieldset>
+						 	</form>
+						 </div>
+					</div>
+				</div>
+		</div>
+	</div>

@@ -1,0 +1,53 @@
+#footer{
+	height: 40px;
+	text-align: center;
+	margin-top: 90px;
+}
+body{
+	text-align: center;
+}
+textarea{
+	height: 25px;
+	width: 200px;
+}
+#addbtn{
+	margin-left: 80px;
+	margin-right: -70px;
+}
+.myinputs{
+	border: none;
+}
+#ligne1{
+	height: 300px;
+}
+#img-project{
+	max-height: 900px;
+	max-width: 400px;
+}
+#connectForm{
+	background-color: #000000;
+}
+#sect-right{
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #ffffff;
+}
+#product,#product1{
+	text-align: justify;
+}
+#infoPro{
+	background-color: #39697e;
+	color: #ffaddf;
+	border-style: solid;
+	border-width: 2px;
+}
+#link1{
+	margin-right: 15px;
+}
+#link2{
+	margin-right: 15px;
+}
+.navTrans{
+	background-color: #0fa5d9;
+	background-color:transparent!important; 
+}

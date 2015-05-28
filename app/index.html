@@ -1,0 +1,96 @@
+<!doctype html> 
+<html lang="en" ng-app="LeanCanvas"> 
+<head>
+	<meta charset="utf-8">
+	<title>My Title</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/slate-bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/slate-bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/app.css">
+</head>
+<body>
+	<div id="firstPage" ng-controller="MainPageCtrl" >
+		<header >
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#"><img ng-src="{{logoUrl}}"  style="width: 100px; height:34px; padding-top:-20px;"></a>
+			    </div>
+
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="nav">
+			        	<a  href="/logIn">Log In</a>
+			        </li>
+			        <li class="nav">
+			        	<a href="/singUp">SingUp</a>
+			        </li>
+			        <li class="nav">
+			        	<a href="/leanCanvas">Canvas</a> 
+			        </li>
+			        <li>
+			        	<a href="/newProject">New Project</a>
+			        </li>
+			        <li>
+			        	<a href="/projects">My Projects</a>
+			        </li>
+			        <li class="nav">
+			        	<a href="/logOut">Log out</a> 
+			        </li>
+			      </ul>
+			    </div>
+			 </div>
+			</nav>
+		</header>
+
+		<div class="container" ng-hide="!logInBool">
+		  <img ng-src="{{logoUrl}}" class="col-lg-4 col-lg-offset-4 col-md-3 col-md-offset-4 col-sm-5 col-sm-offset-3 col-xs-8 col-xs-offset-1">
+
+		   <h3 class="col-lg-4 col-lg-offset-4 col-md-3 col-md-offset-4 col-sm-5 col-sm-offset-3 col-xs-8 col-xs-offset-1">Create your business model and visualise the chart</h3>
+		</div>
+
+				<ng-view></ng-view>
+		<!--<div id="footer" class="hidden-xs hidden-sm">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <div>
+			      <ul class="nav navbar-nav">
+			        <li><a href="#">Link</a></li>
+			        <li><a href="#">Link</a></li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>
+		</div>-->
+
+
+	</div>
+
+		<script  src="/lib/jquery.min.js"></script>
+		<script  src="/lib/bootstrap.js"></script>
+		<script  src="/lib/bootstrap.min.js"></script>
+		<script  src="/lib/angular/angular.js"></script>
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+		<script src="/lib/angular/angular-resource.js"></script>
+		<script src="/lib/angular/angular-cookies.js"></script>
+		<script src="/lib/angular/angular-sanitize.js"></script>
+		<script src="/lib/highcharts-ng.js"></script>
+		<script src="/lib/highstock.src.js"></script>
+		<script  src="/js/app.js"></script>
+		<script  src="/js/controllers/MainPageCtrl.js"></script>
+		<script  src="/js/controllers/logInCtrl.js"></script>
+		<script  src="/js/controllers/singUpCtrl.js"></script>
+		<script  src="/js/controllers/leanCanvasCtrl.js"></script>
+		<script  src="/js/controllers/newProjectCtrl.js"></script>
+		<script src="/js/controllers/projectsCtrl.js "></script>
+		<script src="/js/services/cookieData.js"></script>
+</body>
+</html>
