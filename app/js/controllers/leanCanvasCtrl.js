@@ -4,6 +4,8 @@ LeanCanvas.controller('leanCanvasCtrl',
 		function leanCanvasCtrl($scope, angularFire){
 
 /* ********************************problem********************************/
+			$scope.boolProb='false';
+
 			var fireProb = new Firebase('https://canvasproblem.firebaseIO.com');
 
 			angularFire(fireProb,$scope,'problems');
@@ -26,6 +28,8 @@ LeanCanvas.controller('leanCanvasCtrl',
 			};
 
 /* ********************solution***************************************/
+			$scope.boolSol='false';
+
 			var fireSol = new Firebase('https://canvassolution.firebaseIO.com');
 
 			angularFire(fireSol,$scope,'solutions');
@@ -48,6 +52,8 @@ LeanCanvas.controller('leanCanvasCtrl',
 			};
 
 /* ********************Key metrics***************************************/
+			$scope.boolKey='false';
+
 			var fireMetr = new Firebase('https://canvaskeymetric.firebaseIO.com');
 
 			angularFire(fireMetr,$scope,'metrics');
@@ -70,6 +76,8 @@ LeanCanvas.controller('leanCanvasCtrl',
 			};
 
 /* ********************Unique Value Proposition***************************************/
+			$scope.boolUvp = 'false';
+
 			var fireUvp = new Firebase('https://uniquevaluepropositi.firebaseIO.com');
 
 			angularFire(fireUvp,$scope,'uvps');
@@ -92,6 +100,7 @@ LeanCanvas.controller('leanCanvasCtrl',
 			};
 
 /* ****************************Unfair advantage***************************************/
+			$scope.boolAdv='false';
 			var fireAdv = new Firebase('https://unfairadvantage.firebaseIO.com');
 
 			angularFire(fireAdv,$scope,'advantages');
@@ -113,6 +122,8 @@ LeanCanvas.controller('leanCanvasCtrl',
 				$scope.advantages.splice(start,1);
 			};
 /* ****************************Channel***************************************/
+			$scope.boolChan='false';
+
 			var fireChannel = new Firebase('https://channel.firebaseIO.com');
 
 			angularFire(fireChannel,$scope,'channels');
@@ -134,6 +145,8 @@ LeanCanvas.controller('leanCanvasCtrl',
 				$scope.channels.splice(start,1);
 			};
 /* ****************************Customer Segment***************************************/
+			$scope.boolCus = 'false';
+
 			var fireCustomer = new Firebase('https://customersegment.firebaseIO.com');
 
 			angularFire(fireCustomer,$scope,'customs');
@@ -156,6 +169,8 @@ LeanCanvas.controller('leanCanvasCtrl',
 			};
 
 /* ****************************Coststructure***************************************/
+			$scope.boolCost = 'false';
+
 			var fireCost = new Firebase('https://coststructure.firebaseIO.com');
 
 			angularFire(fireCost,$scope,'costs');
@@ -181,6 +196,7 @@ LeanCanvas.controller('leanCanvasCtrl',
 
 
 /***********************************Revenue stream*****************************************/
+			$scope.boolRev='false';
 
 			var fireRev = new Firebase('https://revenuestream.firebaseio.com');
 
