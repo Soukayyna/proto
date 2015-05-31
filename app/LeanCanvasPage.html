@@ -4,16 +4,17 @@
 				<div id="ligne1">
 <!--**************************************Problem******************************************-->
 					<div class="col-md-2" id="problem">
-						<h4 class="list-group-item">Problem</h4>
+						<h4 class="list-group-item">Problem <a href="#" class="btn btn-sm" ng-click="boolProb = !boolProb"><span class="glyphicon glyphicon-plus"></span></a> </h4>
 						<div ng-repeat="problem in problems" class="list-group-item">
 							<div class="row">
 								<a href="" ng-click="removeProblem()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 								<input type="text" ng-model="problem.text" class="myinputs form-control input-sm">
 							</div>
 						</div>
-						<form ng-submit="addProblem($indexProb)" class="list-group-item ">
+						<form ng-submit="addProblem($indexProb)" class="list-group-item " ng-show="boolProb"
+>
 								<input type="text" ng-model="probTxt" class="form-control input-sm" />
-								<input type="submit" />
+								<input type="submit" ng-click="boolProb = !boolProb" />
 						</form>
 					</div>
 
@@ -21,47 +22,47 @@
 <!--**************************************solution******************************************-->
 
 						<div id="solution">
-							<h4 class="list-group-item">Solution</h4>
+							<h4 class="list-group-item">Solution <a href="#" class="btn btn-sm" ng-click="boolSol = !boolSol" ><span class="glyphicon glyphicon-plus"></span></a></h4>
 							<div ng-repeat="solution in solutions" class="list-group-item">
 								<div class="row">
 									<a href="" ng-click="removeSolution()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 									<input type="text" ng-model="solution.text" class="myinputs form-control input-sm">
 								</div>
 							</div>
-							<form ng-submit="addSolution($indexSol)" class="list-group-item ">
+							<form ng-submit="addSolution($indexSol)" class="list-group-item " ng-show="boolSol">
 									<input type="text" ng-model="solTxt" class="form-control input-sm" />
-									<input type="submit" />
+									<input type="submit" ng-click="boolSol = !boolSol" />
 							</form>
 						</div>
 <!--**************************************Key Metrics******************************************-->
 
 						<div id="keymetrics">
-							<h4 class="list-group-item">Key Metrics</h4>
+							<h4 class="list-group-item">Key Metrics <a href="#" class="btn btn-sm" ng-click="boolKey = !boolKey" ><span class="glyphicon glyphicon-plus"></span></a></h4>
 							<div ng-repeat="metric in metrics" class="list-group-item">
 								<div class="row">
 									<a href="" ng-click="removeMetric()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 									<input type="text" ng-model="metric.text" class="myinputs form-control input-sm">
 								</div>
 							</div>
-							<form ng-submit="addMetric($indexMetr)" class="list-group-item ">
+							<form ng-submit="addMetric($indexMetr)" class="list-group-item " ng-show="boolKey">
 									<input type="text" ng-model="metrTxt" class="form-control input-sm" />
-									<input type="submit" />
+									<input type="submit" ng-click="boolKey = !boolKey"/>
 							</form>
 						</div>
 					</div>
 <!--**************************************UVP******************************************-->
 
 					<div class="col-md-2" id="UVP">
-							<h4 class="list-group-item">Unique Value Proposition</h4>
+							<h4 class="list-group-item">Unique      <a href="#" class="btn btn-sm"  ng-click="boolUvp = !boolUvp"><span class="glyphicon glyphicon-plus"></span></a> Value Proposition </h4>
 							<div ng-repeat="uvp in uvps" class="list-group-item">
 								<div class="row">
 									<a href="" ng-click="removeUVP()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 									<input type="text" ng-model="uvp.text" class="myinputs form-control input-sm">
 								</div>
 							</div>
-							<form ng-submit="addUVP($indexUVP)" class="list-group-item ">
+							<form ng-submit="addUVP($indexUVP)" class="list-group-item " ng-show="boolUvp">
 									<input type="text" ng-model="uvpTxt" class="form-control input-sm" />
-									<input type="submit" />
+									<input type="submit" ng-click="boolUvp = !boolUvp"/>
 							</form>
 					</div>
 <!--********************************************************************************-->
@@ -70,78 +71,78 @@
 <!--**************************************Unfair advantage******************************************-->
 
 						<div id="advantage">
-							<h4 class="list-group-item">Unfair Advantage</h4>
+							<h4 class="list-group-item">Unfair Advantage <a href="#" class="btn btn-sm" ng-click="boolAdv = !boolAdv" ><span class="glyphicon glyphicon-plus"></span></a></h4>
 							<div ng-repeat="advantage in advantages" class="list-group-item">
 								<div class="row">
 									<a href="" ng-click="removeAdvantage()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 									<input type="text" ng-model="advantage.text" class="myinputs form-control input-sm">
 								</div>
 							</div>
-							<form ng-submit="addAdvantage($indexAdv)" class="list-group-item ">
+							<form ng-submit="addAdvantage($indexAdv)" class="list-group-item " ng-show="boolAdv">
 									<input type="text" ng-model="advTxt" class="form-control input-sm" />
-									<input type="submit" />
+									<input type="submit" ng-click="boolAdv = !boolAdv" />
 							</form>
 						</div>
 <!--**************************************channel******************************************-->
 
 						<div id="channel">
-							<h4 class="list-group-item">Channels</h4>
+							<h4 class="list-group-item">Channels <a href="#" class="btn btn-sm" ng-click="boolChan = !boolChan"><span class="glyphicon glyphicon-plus"></span></a></h4>
 							<div ng-repeat="channel in channels" class="list-group-item">
 								<div class="row">
 									<a href="" ng-click="removeChannel()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 									<input type="text" ng-model="channel.text" class="myinputs form-control input-sm">
 								</div>
 							</div>
-							<form ng-submit="addChannel($indexChan)" class="list-group-item ">
+							<form ng-submit="addChannel($indexChan)" class="list-group-item " ng-show="boolChan">
 									<input type="text" ng-model="chanTxt" class="form-control input-sm" />
-									<input type="submit" />
+									<input type="submit" ng-click="boolChan = !boolChan"/>
 							</form>
 						</div>
 					</div>
 <!--**************************************customer******************************************-->
 
 					<div class="col-md-2" id="customer">
-							<h4 class="list-group-item">Customer Segment</h4>
+							<h4 class="list-group-item">Customer  <a href="#" class="btn btn-sm" ng-click="boolCus = !boolCus" ><span class="glyphicon glyphicon-plus"></span></a>Segment</h4>
 							<div ng-repeat="custom in customs" class="list-group-item">
 								<div class="row">
 									<a href="" ng-click="removeCustom()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 									<input type="text" ng-model="custom.text" class="myinputs form-control input-sm">
 								</div>
 							</div>
-							<form ng-submit="addCustom($indexCus)" class="list-group-item ">
+							<form ng-submit="addCustom($indexCus)" class="list-group-item " ng-show="boolCus">
 									<input type="text" ng-model="custTxt" class="form-control input-sm" />
-									<input type="submit" />
+									<input type="submit" ng-click="boolCus = !boolCus"/>
 							</form>
 					</div>
 				</div>
 <!--**************************************Cost******************************************-->
 
 				<div class="col-md-6" id="cost">
-						<h4 class="list-group-item">Cost Structure</h4>
+						<h4 class="list-group-item">Cost Structure <a href="#" class="btn btn-sm" ng-click="boolCost = !boolCost"><span class="glyphicon glyphicon-plus"></span></a></h4>
 						<div ng-repeat="cost in costs" class="list-group-item">
 							<div class="row">
 								<a href="" ng-click="removeCost()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 								<input type="text" ng-model="cost.text" class="myinputs form-control input-sm">
 							</div>
 						</div>
-						<form ng-submit="addCost($indexCost)" class="list-group-item ">
+						<form ng-submit="addCost($indexCost)" class="list-group-item " ng-show="boolCost" >
 								<input type="text" ng-model="costTxt" class="form-control input-sm" />
-								<input type="submit" />
+								<input type="submit" ng-click="boolCost = !boolCost"/>
 						</form>
 				</div>
 <!--**************************************Revenue stream******************************************-->
 
 				<div class="col-md-6" id="rev">
-						<h4 class="list-group-item">Revenue Stream</h4>
+						<h4 class="list-group-item">Revenue Stream <a href="#" class="btn btn-sm" ng-click="boolRev = !boolRev"><span class="glyphicon glyphicon-plus"></span></a></h4>
 						<div ng-repeat="rev in revs" class="list-group-item">
 							<div class="row">
 								<a href="" ng-click="removeRev()"><span class="glyphicon glyphicon-remove-circle"></span></a>
 								<input type="text" ng-model="rev.text" class="myinputs form-control input-sm">
 							</div>
 						</div>
-						<form ng-submit="addRev($indexRev)" class="list-group-item ">
+						<form ng-submit="addRev($indexRev)" class="list-group-item " ng-show="boolRev">
 								<input type="text" ng-model="revTxt" class="form-control input-sm" />
-								<input type="submit" />
+								<input type="submit" ng-click="boolRev = !boolRev"/>
 						</form>
 				</div>
 <!--**************************************Fin******************************************-->
